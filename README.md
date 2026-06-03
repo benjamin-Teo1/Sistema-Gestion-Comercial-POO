@@ -78,10 +78,6 @@ El proyecto fue desarrollado aplicando conceptos de:
 ```text
 Sistema-Gestion-Comercial-POO
 │
-├── docs
-│   ├── diagrama-clases-uml.png
-│   └── diagrama-clases.drawio
-│
 ├── clases
 │   ├── Persona.js
 │   ├── Cliente.js
