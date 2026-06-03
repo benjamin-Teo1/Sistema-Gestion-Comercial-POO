@@ -1,3 +1,9 @@
+# 👨‍💻 Autores
+
+**Benjamín Teo**
+
+Proyecto académico desarrollado para la materia Laboratorio de Computación utilizando Programación Orientada a Objetos, Historias de Usuario y UML.
+
 # 🏪 Sistema de Gestión Comercial POO
 
 ## 📋 Descripción del Proyecto
@@ -335,9 +341,3 @@ node app.js
 - Auditoría de acciones.
 
 ---
-
-# 👨‍💻 Autor
-
-**Benjamín Teo**
-
-Proyecto académico desarrollado para la materia Laboratorio de Computación utilizando Programación Orientada a Objetos, Historias de Usuario y UML.
