@@ -1,8 +1,9 @@
 # 👨‍💻 Autores
 
-> **Grupo de Trabajo** — Proyecto Final  
+> **Grupo de Trabajo — Proyecto Final**
 > Materia: Introducción al Análisis Sistémico · Alfabetización Digital
 
+---
 
 # 👨‍🏫 Profesor
 
@@ -12,12 +13,12 @@
 
 # 👥 Integrantes
 
-| # | Integrante | Responsabilidades principales |
-|---|-------------|-------------------------------|
-| 1 | Teo |  |
-| 2 | Ingrid | |
-| 3 | Joaquín | |
-| 4 | Bautista |  |
+| # | Integrante | Responsabilidades principales     |
+| - | ---------- | --------------------------------- |
+| 1 | Teo        | Desarrollo del sistema            |
+| 2 | Ingrid     | Análisis y documentación          |
+| 3 | Joaquín    | Diagramas UML y pruebas           |
+| 4 | Bautista   | Gestión de GitHub y documentación |
 
 ---
 
@@ -27,41 +28,48 @@
 
 Sistema de Gestión Comercial desarrollado en JavaScript utilizando Programación Orientada a Objetos (POO).
 
-El objetivo del sistema es administrar las operaciones comerciales, permitiendo registrar clientes, productos, ventas, facturas, reportes y auditorías.
+El objetivo del sistema es administrar las operaciones comerciales permitiendo registrar clientes, productos, ventas, facturas, reportes y auditorías.
 
-Este proyecto fue desarrollado aplicando conceptos de:
+El proyecto fue desarrollado aplicando conceptos de:
 
-- Programación Orientada a Objetos (POO)
-- Herencia
-- Encapsulamiento
-- Modularización
-- Historias de Usuario
-- Git y GitHub
-- Diagramas UML
+* Programación Orientada a Objetos (POO)
+* Herencia
+* Encapsulamiento
+* Modularización
+* Historias de Usuario
+* Git y GitHub
+* UML (Unified Modeling Language)
+* GitHub Projects
+* GitHub Issues
+* Pull Requests
 
 ---
 
 # 🎯 Objetivos
 
-- Gestionar clientes.
-- Gestionar productos.
-- Registrar ventas.
-- Calcular subtotales e impuestos.
-- Generar facturas.
-- Obtener reportes comerciales.
-- Registrar eventos de auditoría.
+* Gestionar clientes.
+* Gestionar productos.
+* Registrar ventas.
+* Calcular subtotales.
+* Calcular impuestos.
+* Generar facturas.
+* Obtener reportes comerciales.
+* Registrar auditorías.
+* Aplicar Programación Orientada a Objetos.
+* Utilizar control de versiones profesional.
 
 ---
 
 # 🛠 Tecnologías Utilizadas
 
-| Tecnología | Uso |
-|------------|-----|
-| JavaScript | Lógica del sistema |
-| Node.js | Ejecución del proyecto |
-| Git | Control de versiones |
-| GitHub | Repositorio remoto |
-| UML | Diseño de clases |
+| Tecnología | Uso                        |
+| ---------- | -------------------------- |
+| JavaScript | Lógica del sistema         |
+| Node.js    | Ejecución del proyecto     |
+| Git        | Control de versiones       |
+| GitHub     | Repositorio remoto         |
+| UML        | Diseño orientado a objetos |
+| Draw.io    | Diagramas UML              |
 
 ---
 
@@ -69,6 +77,10 @@ Este proyecto fue desarrollado aplicando conceptos de:
 
 ```text
 Sistema-Gestion-Comercial-POO
+│
+├── docs
+│   ├── diagrama-clases.png
+│   └── diagrama-clases.drawio
 │
 ├── clases
 │   ├── Persona.js
@@ -87,18 +99,41 @@ Sistema-Gestion-Comercial-POO
 
 ---
 
+# 📊 Diagrama de Clases UML
+
+El siguiente diagrama UML representa la estructura orientada a objetos del sistema y las relaciones entre las clases principales.
+
+## Vista del Diagrama
+
+![Diagrama UML](docs/diagrama-clases.png)
+
+## Archivo Editable
+
+```text
+docs/diagrama-clases.drawio
+```
+
+### Relaciones Principales
+
+* Cliente hereda de Persona.
+* Venta contiene varios DetalleVenta.
+* DetalleVenta referencia un Producto.
+* Venta genera una Factura.
+* Reporte obtiene información de ventas.
+* Auditoria registra eventos del sistema.
+
+---
+
 # 🏗 Diseño Orientado a Objetos
 
 ## Clase Persona
 
-Clase base del sistema.
-
 ### Atributos
 
-- nombre
-- apellido
-- email
-- telefono
+* nombre
+* apellido
+* email
+* telefono
 
 ### Responsabilidad
 
@@ -108,15 +143,17 @@ Almacenar información general de una persona.
 
 ## Clase Cliente
 
-Hereda de la clase Persona.
+### Herencia
+
+Hereda de Persona.
 
 ### Atributos
 
-- idCliente
+* idCliente
 
 ### Responsabilidad
 
-Representar los clientes registrados en el sistema.
+Representar los clientes registrados.
 
 ---
 
@@ -124,15 +161,15 @@ Representar los clientes registrados en el sistema.
 
 ### Atributos
 
-- idProducto
-- nombre
-- categoria
-- precio
-- stock
+* idProducto
+* nombre
+* categoria
+* precio
+* stock
 
 ### Responsabilidad
 
-Gestionar los productos disponibles para la venta.
+Gestionar productos disponibles.
 
 ---
 
@@ -140,12 +177,12 @@ Gestionar los productos disponibles para la venta.
 
 ### Atributos
 
-- producto
-- cantidad
+* producto
+* cantidad
 
 ### Responsabilidad
 
-Representar cada producto vendido dentro de una venta.
+Representar cada línea de una venta.
 
 ---
 
@@ -153,19 +190,21 @@ Representar cada producto vendido dentro de una venta.
 
 ### Atributos
 
-- idVenta
-- cliente
-- detalles
-
-### Responsabilidad
-
-Gestionar el proceso completo de venta.
+* idVenta
+* cliente
+* detalles
 
 ### Funciones
 
-- agregarProducto()
-- calcularTotal()
-- generarFactura()
+* agregarProducto()
+* calcularSubtotal()
+* calcularIVA()
+* calcularTotal()
+* generarFactura()
+
+### Responsabilidad
+
+Gestionar el proceso de venta.
 
 ---
 
@@ -173,14 +212,14 @@ Gestionar el proceso completo de venta.
 
 ### Atributos
 
-- numeroFactura
-- subtotal
-- iva
-- total
+* numeroFactura
+* subtotal
+* iva
+* total
 
 ### Responsabilidad
 
-Generar comprobantes de venta.
+Emitir comprobantes comerciales.
 
 ---
 
@@ -188,7 +227,7 @@ Generar comprobantes de venta.
 
 ### Responsabilidad
 
-Generar estadísticas y reportes comerciales.
+Generar estadísticas y reportes.
 
 ---
 
@@ -196,54 +235,7 @@ Generar estadísticas y reportes comerciales.
 
 ### Responsabilidad
 
-Registrar eventos importantes del sistema.
-
----
-
-# 📊 Diagrama de Clases UML
-
-```text
-                 ┌─────────────┐
-                 │   Persona   │
-                 └──────┬──────┘
-                        │
-                        │ Herencia
-                        ▼
-                 ┌─────────────┐
-                 │   Cliente   │
-                 └─────────────┘
-
-
-┌─────────────┐
-│  Producto   │
-└──────┬──────┘
-       │
-       │
-       ▼
-┌─────────────┐
-│DetalleVenta │
-└──────┬──────┘
-       │
-       ▼
-┌─────────────┐
-│    Venta    │
-└──────┬──────┘
-       │
-       ▼
-┌─────────────┐
-│   Factura   │
-└─────────────┘
-
-
-┌─────────────┐
-│   Reporte   │
-└─────────────┘
-
-
-┌─────────────┐
-│  Auditoria  │
-└─────────────┘
-```
+Registrar eventos y actividades.
 
 ---
 
@@ -295,7 +287,7 @@ Registrar eventos importantes del sistema.
 
 **QUIERO** calcular impuestos automáticamente
 
-**PARA** obtener el total correcto de la venta.
+**PARA** obtener el total correcto.
 
 ---
 
@@ -305,7 +297,7 @@ Registrar eventos importantes del sistema.
 
 **QUIERO** generar facturas
 
-**PARA** entregar comprobantes a los clientes.
+**PARA** entregar comprobantes.
 
 ---
 
@@ -329,6 +321,62 @@ Registrar eventos importantes del sistema.
 
 ---
 
+# 🔀 Control de Versiones
+
+El proyecto se desarrolló utilizando Git y GitHub siguiendo buenas prácticas de desarrollo colaborativo.
+
+## Flujo de Trabajo
+
+1. Creación de Issues.
+2. Creación de ramas específicas.
+3. Desarrollo de funcionalidades.
+4. Commit de cambios.
+5. Push al repositorio remoto.
+6. Pull Request.
+7. Revisión y Merge a main.
+
+## Ejemplos de Ramas
+
+```text
+main
+feature/registrar-cliente
+feature/registrar-producto
+feature/generar-factura
+feature/reportes
+feature/auditoria
+```
+
+## Herramientas Utilizadas
+
+* Git
+* GitHub
+* GitHub Projects
+* GitHub Issues
+* Pull Requests
+
+---
+
+# 📌 Gestión del Proyecto
+
+Se utilizó GitHub Projects para la organización de tareas.
+
+### Estados
+
+* Backlog
+* To Do
+* In Progress
+* Review
+* Done
+
+### Elementos Gestionados
+
+* Historias de Usuario
+* Issues
+* Pull Requests
+* Mejoras del Sistema
+
+---
+
 # ▶ Ejecución del Proyecto
 
 Instalar Node.js.
@@ -349,12 +397,19 @@ node app.js
 
 # 📈 Beneficios del Sistema
 
-- Organización de ventas.
-- Control de clientes.
-- Gestión de productos.
-- Control de stock.
-- Facturación automática.
-- Reportes comerciales.
-- Auditoría de acciones.
+* Organización de ventas.
+* Gestión de clientes.
+* Gestión de productos.
+* Control de stock.
+* Facturación automática.
+* Reportes comerciales.
+* Auditoría de acciones.
+* Aplicación de POO.
+* Uso de UML.
+* Uso profesional de Git y GitHub.
 
 ---
+
+# 📄 Licencia
+
+Proyecto académico desarrollado con fines educativos para la materia Introducción al Análisis Sistémico y Alfabetización Digital.
