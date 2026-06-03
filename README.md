@@ -95,11 +95,8 @@ Sistema-Gestion-Comercial-POO
 
 ---
 
-# 📊 Diagrama de Clases UML
-
-El siguiente diagrama UML representa la estructura orientada a objetos del sistema y las relaciones entre las clases principales.
-
 ## Vista del Diagrama
+El siguiente diagrama UML representa la estructura orientada a objetos del sistema y las relaciones entre las clases principales.
 
 # 📊 Diagrama de Clases UML
 <img width="763" height="602" alt="diagrama-clases-uml" src="https://github.com/user-attachments/assets/ef34ac8a-c6ec-43dc-8f06-55e159be870c" />
