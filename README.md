@@ -116,7 +116,7 @@ El siguiente diagrama UML representa la estructura orientada a objetos del siste
 
 ---
 
-# 🏗 Diseño Orientado a Objetos
+# 🏗 Programación Orientado a Objetos
 
 ## Clase Persona
 
