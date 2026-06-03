@@ -106,6 +106,7 @@ El siguiente diagrama UML representa la estructura orientada a objetos del siste
 ## Vista del Diagrama
 
 # 📊 Diagrama de Clases UML
+<img width="763" height="602" alt="diagrama-clases-uml" src="https://github.com/user-attachments/assets/ef34ac8a-c6ec-43dc-8f06-55e159be870c" />
 
 ![Diagrama UML](docs/diagrama-clases-uml.png)
 
