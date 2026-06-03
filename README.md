@@ -10,7 +10,7 @@ Proyecto académico desarrollado para la materia Laboratorio de Computación uti
 
 Sistema de Gestión Comercial desarrollado en JavaScript utilizando Programación Orientada a Objetos (POO).
 
-El objetivo del sistema es administrar las operaciones comerciales de una empresa permitiendo registrar clientes, productos, ventas, facturas, reportes y auditorías.
+El objetivo del sistema es administrar las operaciones comerciales, permitiendo registrar clientes, productos, ventas, facturas, reportes y auditorías.
 
 Este proyecto fue desarrollado aplicando conceptos de:
 
