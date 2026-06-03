@@ -79,7 +79,7 @@ El proyecto fue desarrollado aplicando conceptos de:
 Sistema-Gestion-Comercial-POO
 │
 ├── docs
-│   ├── diagrama-clases.png
+│   ├── diagrama-clases-uml.png
 │   └── diagrama-clases.drawio
 │
 ├── clases
@@ -105,7 +105,9 @@ El siguiente diagrama UML representa la estructura orientada a objetos del siste
 
 ## Vista del Diagrama
 
-![Diagrama UML](docs/diagrama-clases.png)
+# 📊 Diagrama de Clases UML
+
+![Diagrama UML](docs/diagrama-clases-uml.png)
 
 ## Archivo Editable
 
