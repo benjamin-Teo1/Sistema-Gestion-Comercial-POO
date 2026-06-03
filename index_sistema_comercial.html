@@ -1,0 +1,143 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Sistema de Gestión Comercial Pro</title>
+<style>
+*{margin:0;padding:0;box-sizing:border-box}
+body{font-family:Segoe UI,Arial,sans-serif;background:#0b1220;color:#fff}
+.header{height:70px;background:#111827;display:flex;align-items:center;justify-content:space-between;padding:0 25px;border-bottom:1px solid #263043}
+.logo{font-size:22px;font-weight:bold;color:#60a5fa}
+.layout{display:flex}
+.sidebar{width:260px;min-height:calc(100vh - 70px);background:#111827;padding:20px}
+.sidebar button{width:100%;margin:6px 0;padding:12px;border:none;border-radius:10px;background:#1f2937;color:#fff;cursor:pointer;text-align:left}
+.sidebar button:hover{background:#2563eb}
+.main{flex:1;padding:25px}
+.page{display:none}
+.page.active{display:block}
+.cards{display:grid;grid-template-columns:repeat(auto-fit,minmax(220px,1fr));gap:20px}
+.card{background:#111827;padding:20px;border-radius:16px;border:1px solid #263043}
+.card h3{color:#9ca3af;font-size:14px}
+.card p{font-size:30px;font-weight:bold;margin-top:10px}
+table{width:100%;margin-top:15px;border-collapse:collapse;background:#111827}
+th,td{padding:12px;border-bottom:1px solid #263043;text-align:left}
+input,select{width:100%;padding:12px;margin-top:5px;background:#1f2937;border:1px solid #374151;color:white;border-radius:8px}
+.btn{background:#2563eb;color:white;border:none;padding:12px 18px;border-radius:8px;margin-top:15px;cursor:pointer}
+.form-grid{display:grid;grid-template-columns:1fr 1fr;gap:15px}
+@media(max-width:768px){.layout{flex-direction:column}.sidebar{width:100%}.form-grid{grid-template-columns:1fr}}
+</style>
+</head>
+<body>
+
+<div class="header">
+<div class="logo">🏢 Sistema Comercial PRO</div>
+<div>Administrador</div>
+</div>
+
+<div class="layout">
+<div class="sidebar">
+<button onclick="showPage('dashboard')">📊 Dashboard</button>
+<button onclick="showPage('ventas')">💰 Ventas</button>
+<button onclick="showPage('compras')">🛒 Compras</button>
+<button onclick="showPage('productos')">📦 Productos</button>
+<button onclick="showPage('clientes')">👥 Clientes</button>
+<button onclick="showPage('stock')">🏪 Stock</button>
+<button onclick="showPage('facturas')">🧾 Facturas</button>
+<button onclick="showPage('reportes')">📈 Reportes</button>
+<button onclick="showPage('auditoria')">🛡 Auditoría</button>
+</div>
+
+<div class="main">
+
+<div class="page active" id="dashboard">
+<h1>Dashboard Ejecutivo</h1><br>
+<div class="cards">
+<div class="card"><h3>Ventas del Día</h3><p>$250.000</p></div>
+<div class="card"><h3>Facturas</h3><p>32</p></div>
+<div class="card"><h3>Clientes</h3><p>54</p></div>
+<div class="card"><h3>Productos</h3><p>120</p></div>
+</div>
+</div>
+
+<div class="page" id="ventas">
+<h1>Registrar Venta</h1><br>
+<div class="card">
+<div class="form-grid">
+<div><label>Cliente</label><input></div>
+<div><label>Producto</label><input></div>
+<div><label>Cantidad</label><input type="number"></div>
+<div><label>Total</label><input type="number"></div>
+</div>
+<button class="btn" onclick="alert('Venta registrada')">Guardar Venta</button>
+</div>
+</div>
+
+<div class="page" id="compras">
+<h1>Registrar Compra</h1><br>
+<div class="card">
+<p>Gestión de compras a proveedores.</p>
+<button class="btn">Registrar Compra</button>
+</div>
+</div>
+
+<div class="page" id="productos">
+<h1>Productos</h1><br>
+<div class="card">
+<div class="form-grid">
+<div><label>Nombre</label><input></div>
+<div><label>Categoría</label><select><option>Tecnología</option></select></div>
+<div><label>Precio</label><input type="number"></div>
+<div><label>Stock</label><input type="number"></div>
+</div>
+<button class="btn">Guardar Producto</button>
+</div>
+</div>
+
+<div class="page" id="clientes">
+<h1>Clientes</h1>
+<table>
+<tr><th>ID</th><th>Nombre</th><th>Email</th></tr>
+<tr><td>C001</td><td>Juan Pérez</td><td>juan@gmail.com</td></tr>
+<tr><td>C002</td><td>María López</td><td>maria@gmail.com</td></tr>
+</table>
+</div>
+
+<div class="page" id="stock">
+<h1>Stock</h1>
+<table>
+<tr><th>Producto</th><th>Cantidad</th></tr>
+<tr><td>Mouse Gamer</td><td>15</td></tr>
+<tr><td>Monitor 24"</td><td>3</td></tr>
+</table>
+</div>
+
+<div class="page" id="facturas">
+<h1>Facturas</h1>
+<div class="card">Factura F001 - $45.000</div>
+</div>
+
+<div class="page" id="reportes">
+<h1>Reportes</h1>
+<div class="cards">
+<div class="card"><h3>Ventas Mensuales</h3><p>$1.250.000</p></div>
+<div class="card"><h3>Productos Vendidos</h3><p>320</p></div>
+</div>
+</div>
+
+<div class="page" id="auditoria">
+<h1>Auditoría</h1>
+<div class="card">12/05/2026 - Venta registrada por ADMIN</div>
+</div>
+
+</div>
+</div>
+
+<script>
+function showPage(id){
+document.querySelectorAll('.page').forEach(p=>p.classList.remove('active'));
+document.getElementById(id).classList.add('active');
+}
+</script>
+</body>
+</html>
