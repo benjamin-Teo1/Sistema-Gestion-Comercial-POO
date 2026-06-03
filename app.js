@@ -1,50 +1,56 @@
-const Cliente = require("./clases/Cliente");
-const Producto = require("./clases/Producto");
-const DetalleVenta = require("./clases/DetalleVenta");
-const Venta = require("./clases/Venta");
-const Auditoria = require("./clases/Auditoria");
+const readline = require('readline');
 
-const cliente = new Cliente(
-    1,
-    "Juan",
-    "Perez",
-    "juan@gmail.com",
-    "351123456"
-);
+const rl = readline.createInterface({
+    input: process.stdin,
+    output: process.stdout
+});
 
-const mouse = new Producto(
-    1,
-    "Mouse Gamer",
-    "Periféricos",
-    25000,
-    50
-);
+function mostrarMenu() {
 
-const teclado = new Producto(
-    2,
-    "Teclado Mecánico",
-    "Periféricos",
-    40000,
-    20
-);
+    console.log("\n========================");
+    console.log("SISTEMA COMERCIAL");
+    console.log("========================");
+    console.log("1. Registrar Cliente");
+    console.log("2. Registrar Producto");
+    console.log("3. Registrar Venta");
+    console.log("4. Reportes");
+    console.log("5. Auditoría");
+    console.log("0. Salir");
 
-const venta = new Venta(
-    1001,
-    cliente
-);
+    rl.question("Seleccione una opción: ", (opcion) => {
 
-venta.agregarProducto(
-    new DetalleVenta(mouse, 2)
-);
+        switch(opcion){
 
-venta.agregarProducto(
-    new DetalleVenta(teclado, 1)
-);
+            case "1":
+                console.log("Registrar Cliente");
+                break;
 
-const factura = venta.generarFactura();
+            case "2":
+                console.log("Registrar Producto");
+                break;
 
-factura.mostrarFactura();
+            case "3":
+                console.log("Registrar Venta");
+                break;
 
-Auditoria.registrarEvento(
-    "Venta registrada correctamente"
-);
+            case "4":
+                console.log("Ver Reportes");
+                break;
+
+            case "5":
+                console.log("Auditoría");
+                break;
+
+            case "0":
+                rl.close();
+                return;
+
+            default:
+                console.log("Opción inválida");
+        }
+
+        mostrarMenu();
+    });
+}
+
+mostrarMenu();
