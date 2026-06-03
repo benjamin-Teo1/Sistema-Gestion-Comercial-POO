@@ -1,8 +1,25 @@
 # 👨‍💻 Autores
 
-**Benjamín Teo**
+> **Grupo de Trabajo** — Proyecto Final  
+> Materia: Introducción al Análisis Sistémico · Alfabetización Digital
 
-Proyecto académico desarrollado para la materia Laboratorio de Computación utilizando Programación Orientada a Objetos, Historias de Usuario y UML.
+
+# 👨‍🏫 Profesor
+
+**Narciso Perez**
+
+---
+
+# 👥 Integrantes
+
+| # | Integrante | Responsabilidades principales |
+|---|-------------|-------------------------------|
+| 1 | Teo |  |
+| 2 | Ingrid | |
+| 3 | Joaquín | |
+| 4 | Bautista |  |
+
+---
 
 # 🏪 Sistema de Gestión Comercial POO
 
