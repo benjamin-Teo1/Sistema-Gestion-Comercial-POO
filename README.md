@@ -113,6 +113,50 @@ El siguiente diagrama UML representa la estructura orientada a objetos del siste
 
 ---
 
+# 🔎 Análisis de Sustantivos y Verbos
+
+Durante la etapa de análisis de requerimientos se identificaron los principales sustantivos y verbos presentes en las Historias de Usuario. Este proceso permitió determinar las entidades, responsabilidades y funcionalidades necesarias para el desarrollo del Sistema de Gestión Comercial utilizando Programación Orientada a Objetos.
+
+## 📌 Sustantivos Identificados
+
+Los sustantivos representan entidades, objetos o conceptos importantes del dominio del problema.
+
+| Sustantivo | Clase o Entidad Asociada |
+|------------|--------------------------|
+| Persona | Persona |
+| Cliente | Cliente |
+| Producto | Producto |
+| Venta | Venta |
+| Detalle de Venta | DetalleVenta |
+| Factura | Factura |
+| Reporte | Reporte |
+| Auditoría | Auditoria |
+| Sistema | Sistema |
+| Stock | Producto |
+| Subtotal | Venta |
+| IVA | Factura |
+| Total | Factura |
+| Evento | Auditoria |
+| Administrador | Usuario del Sistema |
+| Vendedor | Usuario del Sistema |
+| Información Comercial | Reporte |
+| Categoría | Producto |
+| Precio | Producto |
+| Cantidad | DetalleVenta |
+
+### Sustantivos que se transformaron en clases
+
+```text
+Persona
+Cliente
+Producto
+DetalleVenta
+Venta
+Factura
+Reporte
+Auditoria
+```
+
 # 🏗 Programación Orientado a Objetos
 
 ## Clase Persona
